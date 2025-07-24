@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.main-wrapper {
+  text-align: center;
+}
+
+.stopwatch-circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.ticks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.tick {
+  position: absolute;
+  width: 2px;
+  height: 12px;
+  background: #000;
+  top: 4px;
+  left: 50%;
+  transform-origin: bottom center;
+}
+
+.needle {
+  position: absolute;
+  width: 2px;
+  height: 140px;
+  background: #0047ab;
+  top: 10px;
+  left: 50%;
+  transform: rotate(0deg);
+  transform-origin: bottom center;
+  z-index: 2;
+}
+
+.digital-timer {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  font-weight: bold;
+  color: #304166;
+  z-index: 3;
+}
+
+.inner-dial {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: inset 0 0 5px #ccc;
+}
+
+.inner-ticks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.inner-tick {
+  position: absolute;
+  width: 1.5px;
+  height: 8px;
+  background: #444;
+  top: 2px;
+  left: 50%;
+  transform-origin: bottom center;
+}
+
+.inner-needle {
+  position: absolute;
+  width: 1.5px;
+  height: 40px;
+  background: #000;
+  top: 5px;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: rotate(0deg);
+}
+
+.button-row {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.btn.grey {
+  background-color: #eee;
+  color: #333;
+}
+
+.btn.blue {
+  background-color: #3b70f9;
+  color: white;
+}
